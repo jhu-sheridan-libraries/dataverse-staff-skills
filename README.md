@@ -1,4 +1,4 @@
-# Dataverse staff skills
+# Dataverse Skills for JHU Staff and Operators
 
 Portable agent skills for staff deposits, curation and ordinary repository operations on the JHU AWS ECS Fargate Dataverse stack.
 
