@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dataverse"
+  short_description: "Deposit, curate, and transfer data on AWS Fargate"

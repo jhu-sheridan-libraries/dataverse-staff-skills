@@ -1,0 +1,67 @@
+{
+  "status": "OK",
+  "data": {
+    "versionState": "DRAFT",
+    "datasetPersistentId": "doi:10.5072/FK2/TUTORIAL-NOT-REAL",
+    "tutorialNote": "Synthetic offline example; no real instance or PID. Rights and contact metadata intentionally unresolved for practice.",
+    "metadataBlocks": {
+      "citation": {
+        "fields": [
+          {
+            "typeName": "title",
+            "typeClass": "primitive",
+            "multiple": false,
+            "value": "Synthetic temperature observations for Dataverse tutorial"
+          },
+          {
+            "typeName": "dsDescription",
+            "typeClass": "compound",
+            "multiple": true,
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "typeClass": "primitive",
+                  "multiple": false,
+                  "value": "Invented measurements for local tutorial practice; no actual research data."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "files": [
+      {
+        "label": "README.txt",
+        "directoryLabel": "data",
+        "restricted": false,
+        "dataFile": {
+          "id": 1,
+          "filename": "README.txt",
+          "filesize": 615,
+          "contentType": "text/plain",
+          "checksum": {
+            "type": "SHA-256",
+            "value": "a774d1d6da509939e9742ebc7a51d9d305980abd4b695010b14d07e38391b4dd"
+          }
+        }
+      },
+      {
+        "label": "observations.csv",
+        "directoryLabel": "data",
+        "restricted": false,
+        "dataFile": {
+          "id": 2,
+          "filename": "observations.csv",
+          "filesize": 111,
+          "contentType": "text/csv",
+          "checksum": {
+            "type": "SHA-256",
+            "value": "666e325942d56e1fb3d168f6c88281fb937db5a47207ae86bf51811d5c836e58"
+          }
+        }
+      }
+    ]
+  }
+}
