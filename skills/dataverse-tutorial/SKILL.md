@@ -15,7 +15,7 @@ Read the companion [dataverse skill](../dataverse/SKILL.md) and the relevant ref
 Briefly explain that the skill helps staff prepare, upload, curate and manage Dataverse content on AWS Fargate, and uses DVUploader for large files. State that practice begins with synthetic local examples. Then present **one** choice:
 
 - Guided deposit practice (default): files → metadata → transfer → verification → next operation.
-- Large-upload recovery: work through a failed transfer and safely recover with DVUploader.
+- Large-upload recovery: work through a failed transfer, recover with DVUploader, and practice S3 sideload/registration when needed.
 - My own task: explain an actual deposit/curation request, starting with read-only preparation.
 
 Use a choice tool if the client has one, or a plain question otherwise. Wait for the learner's answer. If their invocation already names a track or task, use it and start its first substantive step instead of asking the same question again. Do not request API keys or private datasets for the tutorial.

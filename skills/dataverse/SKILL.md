@@ -1,18 +1,18 @@
 ---
 name: dataverse
 license: Apache-2.0
-description: "Assist repository staff with Dataverse deposits, metadata and file curation, review, access permissions, versions, and collection operations on the JHU AWS ECS Fargate stack. Use DVUploader for large or bulk uploads and transfer troubleshooting, drawing on Dataverse recipes and relevant codebases. Excludes system administration and on-premises workflows."
+description: "Assist repository staff with Dataverse deposits, metadata and file curation, review, access permissions, versions, and collection operations on the JHU AWS ECS Fargate stack. Use DVUploader for large or bulk uploads, transfer troubleshooting and necessary S3 sideload/registration recovery, drawing on Dataverse recipes and relevant codebases. Excludes system administration and on-premises workflows."
 ---
 
 # Dataverse Staff
 
-Help staff complete a deposit or repository operation with an inspectable result: correct files and metadata in the intended dataset/version, appropriate access, and evidence of what succeeded. The deployment is AWS ECS Fargate with S3 storage. Use **DVUploader for large or bulk file transfers**, including recovery after transfer failures.
+Help staff complete a deposit or repository operation with an inspectable result: correct files and metadata in the intended dataset/version, appropriate access, and evidence of what succeeded. The deployment is AWS ECS Fargate with S3 storage. Use **DVUploader for large or bulk file transfers**, including recovery after transfer failures. If that route remains unsuccessful, support an authorized S3 sideload followed by Dataverse registration using an already enabled capability and approved client access.
 
 Invoke as `/dataverse` in clients with skill slash commands, `$dataverse` in Codex's skill mention interface, or `Use the dataverse skill`. For a guided introduction, invoke `dataverse-tutorial`. For client-specific discovery and invocation, read [references/clients.md](references/clients.md). Keep the workflow independent of any particular agent's tool names: use its available browser, HTTP, filesystem and shell capabilities, and state missing capabilities rather than inventing them.
 
 ## Scope
 
-Support deposit preparation, draft creation and edits, metadata and documentation review, file uploads/replacements, ingest checks, review submission/return, publication when requested, dataset/file permissions, embargoes where supported, exports, citations, and ordinary collection management. A Dataverse collection's Administrator role is a repository role; it does not authorize installation administration.
+Support deposit preparation, draft creation and edits, metadata and documentation review, file uploads/replacements, S3 sideload/registration recovery and local AWS CLI setup, ingest checks, review submission/return, publication when requested, dataset/file permissions, embargoes where supported, exports, citations, and ordinary collection management. A Dataverse collection's Administrator role is a repository role; it does not authorize installation administration.
 
 Exclude infrastructure provisioning, deployments, ECS exec, AWS IAM/bucket policies/lifecycle changes, proxy/WAF/ALB changes, application or database configuration, Solr/reindexing, upgrades, backups/restores, admin/superuser APIs, forced lock removal, and raw storage cleanup. Exclude SSH/rsync, server filesystem/mount workflows, and other on-premises architectures. When the next repair requires these capabilities, prepare a specific handoff with the evidence gathered; do not perform that repair.
 
@@ -30,7 +30,7 @@ Identify the running Dataverse version through public instance information/UI wh
 - For Python automation or existing pyDataverse/python-dvuploader code, read [references/python-clients.md](references/python-clients.md). These are distinct clients with version-dependent interfaces; keep DVUploader as the established large-transfer default.
 - For a local file manifest or comparison with a saved canonical draft response, read [references/inventory.md](references/inventory.md) and use the bundled Python helper. It performs no network requests or repository writes.
 - For deposit preparation and curation, read [references/deposits-curation.md](references/deposits-curation.md).
-- For large/bulk uploads, interrupted transfers, HTTP/S3 errors, or Fargate-specific transfer diagnosis, read [references/large-uploads.md](references/large-uploads.md). Keep DVUploader as the transfer tool.
+- For large/bulk uploads, interrupted transfers, HTTP/S3 errors, or Fargate-specific transfer diagnosis, read [references/large-uploads.md](references/large-uploads.md). Use DVUploader first; for a necessary fallback or completed S3 object awaiting registration, also read [references/s3-sideload.md](references/s3-sideload.md).
 - For review, publication, access, collections, versions, exports, or authenticated API edits, read [references/staff-operations.md](references/staff-operations.md).
 
 Load only references relevant to the request. Follow links to official version-matched documentation when behavior or options need verification.
